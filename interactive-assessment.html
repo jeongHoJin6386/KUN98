@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="ko">
+<head>
+    <meta charset="UTF-8"/>
+    <title>알고리즘 이해 형성평가</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <style>
+        .assessment-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .question {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+        .options {
+            margin-top: 10px;
+        }
+        .options label {
+            display: block;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            display: none;
+        }
+        .correct {
+            background-color: #dff0d8;
+            color: #3c763d;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .incorrect {
+            background-color: #f2dede;
+            color: #a94442;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .score {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+        .feedback-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 20px 0 10px 0;
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 20px auto;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .question-result {
+            margin: 10px 0;
+            padding: 10px;
+            border-left: 4px solid;
+        }
+        .question-result.correct {
+            border-left-color: #3c763d;
+        }
+        .question-result.incorrect {
+            border-left-color: #a94442;
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <div class="nav-buttons">
+            <a href="02_char01.xhtml" class="nav-button">
+                <i class="fas fa-arrow-left"></i> 이전 페이지
+            </a>
+        </div>
+        <a href="01_content.xhtml" class="nav-button home-button">
+            <i class="fas fa-home"></i> 홈
+        </a>
+        <div class="nav-buttons">
+            <a href="06_repetition.xhtml" class="nav-button">
+                다음 페이지 <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="assessment-container">
+        <h1>알고리즘 이해 형성평가</h1>
+        
+        <div id="quiz-container">
+            <div class="question">
+                <p>1. 다음 중 알고리즘의 필수적인 특징이 아닌 것은?</p>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="a" /> 입력과 출력</label>
+                    <label><input type="radio" name="q1" value="b" /> 명확성</label>
+                    <label><input type="radio" name="q1" value="c" /> 무한 실행</label>
+                    <label><input type="radio" name="q1" value="d" /> 유한성</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>2. 다음 중 알고리즘을 표현하는 방법이 아닌 것은?</p>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="a" /> 순서도</label>
+                    <label><input type="radio" name="q2" value="b" /> 의사코드</label>
+                    <label><input type="radio" name="q2" value="c" /> 그림 그리기</label>
+                    <label><input type="radio" name="q2" value="d" /> 자연어</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>3. 다음 순서도에서 사용되는 기호가 올바르게 연결된 것은?</p>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="a" /> 타원형 - 시작/종료, 사각형 - 처리</label>
+                    <label><input type="radio" name="q3" value="b" /> 타원형 - 처리, 사각형 - 시작/종료</label>
+                    <label><input type="radio" name="q3" value="c" /> 마름모 - 시작/종료, 사각형 - 처리</label>
+                    <label><input type="radio" name="q3" value="d" /> 타원형 - 판단, 사각형 - 처리</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>4. 알고리즘의 효율성을 평가하는 기준이 아닌 것은?</p>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="a" /> 시간 복잡도</label>
+                    <label><input type="radio" name="q4" value="b" /> 공간 복잡도</label>
+                    <label><input type="radio" name="q4" value="c" /> 코드 길이</label>
+                    <label><input type="radio" name="q4" value="d" /> 실행 시간</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>5. 다음 중 알고리즘의 제어 구조가 아닌 것은?</p>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="a" /> 순차 구조</label>
+                    <label><input type="radio" name="q5" value="b" /> 반복 구조</label>
+                    <label><input type="radio" name="q5" value="c" /> 선택 구조</label>
+                    <label><input type="radio" name="q5" value="d" /> 병렬 구조</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>6. 알고리즘의 신뢰성과 가장 관련이 깊은 것은?</p>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="a" /> 실행 속도</label>
+                    <label><input type="radio" name="q6" value="b" /> 메모리 사용량</label>
+                    <label><input type="radio" name="q6" value="c" /> 정확성</label>
+                    <label><input type="radio" name="q6" value="d" /> 코드 길이</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>7. 알고리즘의 일반성과 가장 관련이 깊은 것은?</p>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="a" /> 특정 문제 해결</label>
+                    <label><input type="radio" name="q7" value="b" /> 다양한 문제 적용</label>
+                    <label><input type="radio" name="q7" value="c" /> 실행 속도</label>
+                    <label><input type="radio" name="q7" value="d" /> 메모리 사용량</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>8. 알고리즘의 확장성과 가장 관련이 깊은 것은?</p>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="a" /> 입력 크기 증가</label>
+                    <label><input type="radio" name="q8" value="b" /> 코드 길이</label>
+                    <label><input type="radio" name="q8" value="c" /> 변수 개수</label>
+                    <label><input type="radio" name="q8" value="d" /> 주석 개수</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>9. 다음 중 알고리즘 설계 시 고려해야 할 사항이 아닌 것은?</p>
+                <div class="options">
+                    <label><input type="radio" name="q9" value="a" /> 문제 분석</label>
+                    <label><input type="radio" name="q9" value="b" /> 입력/출력 정의</label>
+                    <label><input type="radio" name="q9" value="c" /> 변수명 길이</label>
+                    <label><input type="radio" name="q9" value="d" /> 알고리즘 검증</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>10. 알고리즘의 논리적 절차와 가장 관련이 깊은 것은?</p>
+                <div class="options">
+                    <label><input type="radio" name="q10" value="a" /> 실행 속도</label>
+                    <label><input type="radio" name="q10" value="b" /> 메모리 사용량</label>
+                    <label><input type="radio" name="q10" value="c" /> 단계별 사고 과정</label>
+                    <label><input type="radio" name="q10" value="d" /> 코드 길이</label>
+                </div>
+            </div>
+        </div>
+
+        <button onclick="checkAnswers()">평가 제출</button>
+
+        <div id="result-container" class="result">
+            <div class="score">점수: <span id="score">0</span>/100</div>
+            <div class="feedback-title">채점 결과</div>
+            <div id="feedback"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+//<![CDATA[
+        const answers = {
+            q1: 'c', // 무한 실행
+            q2: 'c', // 그림 그리기
+            q3: 'a', // 타원형 - 시작/종료, 사각형 - 처리
+            q4: 'c', // 코드 길이
+            q5: 'd', // 병렬 구조
+            q6: 'c', // 정확성
+            q7: 'b', // 다양한 문제 적용
+            q8: 'a', // 입력 크기 증가
+            q9: 'c', // 변수명 길이
+            q10: 'c' // 단계별 사고 과정
+        };
+
+        const explanations = {
+            q1: "알고리즘은 반드시 유한한 시간 내에 종료되어야 합니다. 무한 실행은 알고리즘의 필수적인 특징이 아닙니다.",
+            q2: "그림 그리기는 알고리즘을 표현하는 공식적인 방법이 아닙니다. 순서도, 의사코드, 자연어가 일반적인 표현 방법입니다.",
+            q3: "순서도에서 타원형은 시작/종료를, 사각형은 처리를 나타냅니다.",
+            q4: "코드 길이는 알고리즘의 효율성을 평가하는 기준이 아닙니다. 시간 복잡도와 공간 복잡도가 주요 평가 기준입니다.",
+            q5: "병렬 구조는 알고리즘의 기본 제어 구조가 아닙니다. 기본 제어 구조는 순차, 반복, 선택 구조입니다.",
+            q6: "알고리즘의 신뢰성은 주어진 입력에 대해 항상 정확한 결과를 도출하는 능력과 관련이 있습니다.",
+            q7: "알고리즘의 일반성은 다양한 유형의 문제에 적용할 수 있는 능력과 관련이 있습니다.",
+            q8: "알고리즘의 확장성은 입력 크기가 커져도 성능이 크게 저하되지 않는 능력과 관련이 있습니다.",
+            q9: "변수명 길이는 알고리즘 설계 시 고려해야 할 사항이 아닙니다. 문제 분석, 입출력 정의, 알고리즘 검증이 중요합니다.",
+            q10: "알고리즘의 논리적 절차는 문제 해결을 위한 단계별 사고 과정과 관련이 있습니다."
+        };
+
+        function checkAnswers() {
+            let score = 0;
+            let feedback = '';
+            let unanswered = [];
+            
+            for (let i = 1; i <= 10; i++) {
+                const questionName = 'q' + i;
+                const selectedAnswer = document.querySelector(`input[name="${questionName}"]:checked`);
+                
+                if (selectedAnswer) {
+                    if (selectedAnswer.value === answers[questionName]) {
+                        score += 10;
+                        feedback += `<div class="question-result correct">
+                            <p>문제 ${i}번: 정답 (10점)</p>
+                        </div>`;
+                    } else {
+                        feedback += `<div class="question-result incorrect">
+                            <p>문제 ${i}번: 오답 (0점)</p>
+                            <p>설명: ${explanations[questionName]}</p>
+                        </div>`;
+                    }
+                } else {
+                    unanswered.push(i);
+                }
+            }
+
+            const resultContainer = document.getElementById('result-container');
+            const scoreElement = document.getElementById('score');
+            const feedbackElement = document.getElementById('feedback');
+
+            scoreElement.textContent = score;
+            
+            if (unanswered.length > 0) {
+                feedback = `<div class="incorrect">
+                    <p>미답변 문제: ${unanswered.join(', ')}번 (각 0점)</p>
+                </div>` + feedback;
+            }
+
+            feedbackElement.innerHTML = feedback;
+            resultContainer.style.display = 'block';
+
+            // 스크롤을 결과로 이동
+            resultContainer.scrollIntoView({ behavior: 'smooth' });
+        }
+//]]>
+    </script>
+</body>
+</html> 
